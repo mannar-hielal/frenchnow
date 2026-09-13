@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;850&display=swap');
+
+
+/* Header Section */
+.tf-header {
+  position: relative;
+  background-size: cover;
+  height: 850px;
+  color: rgba(255, 255, 255, 1); 
+}
+
+/* TRANSPARENCY HEADER IMAGES */
+.tf-header::before {
+  background: rgba(0, 0, 0, 0.46);
+  position: absolute;
+  top:0;
+  width: 100%;
+  /* height: 800px; */
+  height: 850px;
+  content: ' '; }
+.tf-header h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px; }
+.tf-header .nav {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 850;
+  letter-spacing: 1px; }
+.tf-header .nav-link {
+  color: rgba(255, 255, 255, 0.75) !important; }
+  .tf-header .nav-link:hover {
+    color: white !important; }
+.tf-header h2 {
+  text-transform: uppercase;
+  margin-top: 4rem;
+  font-weight: 600;
+  font-size: 48px;
+  letter-spacing: 1px; 
+}
+.tf-header .tf-hh-col {
+  padding-right: 0.5rem !important; }
+@media (max-width: 1199.98px) {
+  .tf-header h2 {
+    text-transform: uppercase;
+    margin-top: 3rem;
+    font-size: 42px; } 
+  }
+@media (max-width: 991.98px) {
+  .tf-header h2 {
+    margin-top: 2rem;
+    font-size: 30px; } 
+  }
+@media (max-width: 575.98px) {
+  .tf-header h1 {
+    width: 120%;
+    text-align: center; }
+  .tf-header #navbar {
+    margin: 0 auto; }
+  .tf-header h2 {
+    margin-top: 1rem;
+    font-size: 24px; } }
+@media (max-width: 767.98px) {
+  .tf-header .tf-hh-col {
+    padding-right: 0 !important; } 
+  }
+
+/* Work Section */
+.tf-work-section h2.h3 {
+  text-transform: uppercase;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  font-weight: 850;
+  color: #383838; 
+}
+
+.tf-work-section .card {
+  border: none;
+  border-radius: none; 
+}
+  .tf-work-section .card .card-body {
+    padding-left: 0;
+    padding-right: 0; 
+  }
+
+.tf-work-section p {
+  /* padding-right: 3rem; */ 
+  padding-right: 0rem;
+}
+
+@media (max-width: 767.98px) {
+  .tf-work-section h2.h3 {
+    font-size: 22px;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem; } 
+  }
+
+/* Quotes Section */
+
+.carousel-inner {
+  z-index: 3;
+  position: relative;
+}
+
+.carousel-indicators {
+  z-index: 4;
+}
+
+/* TRANSPARENCY CAROUSEL IMAGES */
+.carousel-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.46);
+  z-index: 1;
+}
+
+.tf-quotes-section .carousel-item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 400px; 
+}
+
+.tf-quotes-section .carousel-item::before {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 100%;
+  height: 340px;
+  content: ' '; 
+}
+
+.tf-quotes-section .slider-text-1 {
+  font-weight: 300;
+  font-size: 18px;
+  padding: 0; 
+}
+
+.tf-quotes-section .slider-text-2 {
+  font-weight: 400;
+  font-size: 24px; 
+}
+
+.tf-quotes-section .carousel-caption {
+  height: 100%;
+  padding: 6rem 4rem; 
+}
+
+@media (max-width: 575.98px) {
+  .tf-quotes-section .slider-text-2 {
+    font-size: 12px; }
+  .tf-quotes-section .carousel-caption {
+    padding: 5rem 1rem; 
+    right:12% !important;
+    left:12% !important; }
+  .tf-quotes-section .slider-text-1 {
+    font-size: 14px;
+    padding: 0; } 
+  }
+
+@media (max-width: 767.98px) {
+  .tf-quotes-section .carousel-caption {
+    padding: 2rem 0rem 1rem 0rem;
+  }
+  .tf-quotes-section .slider-text-2 {
+    font-size: 20px; } 
+  }
+
+/* Contact Section */
+.tf-contact-section {
+  background: url('../images/learn_french_in_paris_symbolic_01.webp') no-repeat center center;
+  background-size: cover;
+}
+
+.tf-contact-section h2.h4 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #666666;
+  padding: 4rem 4rem;
+  font-weight: bold; 
+}
+
+.tf-contact-section button {
+  padding-right: 40px;
+  padding-left: 40px; 
+}
+
+.tf-contact-section h3.h5 {
+  text-transform: uppercase;
+  color: #666666;
+  font-weight: bold; 
+}
+
+.tf-contact-section .tf-contact-col {
+  padding-bottom: 0.5rem;
+  padding-right: 0.5rem !important; }
+
+@media (max-width: 991.98px) {
+  .tf-contact-section .tf-contact-col {
+    padding-right: 0 !important; } 
+  }
+
+@media (max-width: 767.98px) {
+  .tf-contact-section h2.h4 {
+    padding: 1rem 0.5rem;
+    font-size: 18px; } 
+  }
+
+/* Footer Section */
+.tf-footer .tf-design a {
+  color: inherit;
+  border-bottom: 1px dashed; }
+  .tf-footer .tf-design a:hover {
+    text-decoration: none; 
+}
+
+@media (max-width: 767.98px) {
+  .tf-footer .tf-design {
+    text-align: left !important; } 
+  }
+
+/*  OWN CSS ===================================================================================================== */
+
+body {
+  font-family: 'Oxygen', sans-serif;
+  
+}
+
+/* MEDIAQUERIES
+
+/* Small devices (576px and up) */
+@media (max-width: 480px) {
+  /* Add your styles for small devices here */
+  .bannercontainer {
+    overflow: hidden;
+    cursor:pointer;
+  }
+
+  .bannerText {
+    font-size: 1rem;
+    font-weight: 850;
+  }
+
+  .tf-header .nav{
+    font-size:12px;
+  }
+  
+  .tf-header {
+    height:850px;
+  }
+
+  .tf-header::before  {
+    height:850px;
+  }
+
+  .imgLastSection {
+    height:850px;
+    position: relative;
+    background-size: cover;
+  }
+}
+
+/* @media (max-width: 750px) and (min-width: 850px) and (orientation: landscape) {} */
+
+/* Large devices (up to 1199.98px) */
+@media (min-width: 850px) and (orientation: landscape) {
+  /* Add your styles for large devices here */
+  .bannercontainer {
+    overflow: hidden;
+    cursor:pointer;
+  }
+
+  .bannerText {
+    font-size:2rem;
+    font-weight: 850;
+  }
+
+  .tf-header {
+    height:800px;
+  }
+
+  .tf-header::before  {
+    height:800px;
+  }
+
+  .imgLastSection {
+    height:800px;
+    position: relative;
+    background-size: cover;
+  
+  }
+}
+
+.formTop {
+  border-radius:0;
+  width:60%;
+}
+
+.textCourses {
+  color:#333;
+}
+
+.cardlinkOwn {
+  color:#043461 !important;
+}
+
+.cardlinkOwn :hover{
+  color:#2b83d6 !important;
+}
+
+
+/* Buttons ---------------------------------------------------- */
+
+.btn-ownblue {
+  /* background-color: #002654;  ORIGINAL */
+  background-color: #002654;
+  color:white;
+}
+
+.btn-ownblue:hover {
+  background-color: #0414a1;
+  border-color: #044ba1;
+  /* color:#044ba1; */
+}
+
+.phoneBtn {
+  color:white !important;
+}
+
+.phoneBtn:hover {
+  color: #3e51ff !important;
+}
+
+.btn-ownred {
+  /* background-color: #ED2939; ORIGINAL */
+  background-color: #ce1126;
+  color:white; 
+}
+
+.btn-ownred:hover {
+  background-color: #e61308;
+  border-color: #ff574e;
+  color:#ff574e;
+}
+
+.btn-send {
+  color: #fff;
+  background-color: #ce1126;
+  border-color: #a7081a;
+  
+}
+
+.btn-send:hover {
+  color: #fff;
+  background-color: #ff574e;
+  border-color: #ff574e;
+  
+}
+
+.own-btnup {
+  color:#ce1126;
+}
+
+.own-btnup:hover {
+  color:#ff574e;
+}
+
+/* HAMBURGER MENU CSS START ---------------------------------------------------- */
+
+:root {
+  --menu-icon-scale: 1; /* Adjust this value to scale the icon */
+}
+
+a#menu-icon {
+  display: inline-block;
+  padding: 10px;
+  transform: scale(var(--menu-icon-scale));
+}
+
+a#menu-icon .bar {
+  margin: 3px;
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 1.5px;
+  transition: margin 0.35s, transform 0.2s;
+}
+
+a#menu-icon:not(.close):hover {
+  padding: 6px 10px;
+}
+
+a#menu-icon:not(.close):hover .bar {
+  margin: 5px 3px;
+}
+
+a#menu-icon.close .bar:first-child {
+  transform: translateY(6px) rotate(45deg);
+}
+
+a#menu-icon.close .bar:nth-child(2) {
+  opacity: 0;
+}
+
+a#menu-icon.close .bar:last-child {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* BANNER CSS ---------------------------------------------------- */
+
+.bannercontainer {
+  overflow: hidden;
+  cursor:pointer;
+  font-family: 'Oxygen', sans-serif;
+  background-color: #043461 !important;
+  position: fixed; 
+  z-index: 5; 
+  top: 0;
+}
+
+.bannerText:hover {
+  color:#ebb916;
+}
+
+.bannerX:hover {
+  color:#ebb916;
+}
+
+.close-container {
+  background-color: rgba(0, 0, 0, 0.1); /* Use your desired color */
+  /* padding-right: 13px !important; */
+  height:100% !important;
+}
+
+/* BANNER SPEED (0 = STOP) ----------------------------------------------------  */
+
+.booking {
+  position: relative;
+  animation: rollBanner /* 25s */ 0s linear infinite;
+}
+
+@keyframes rollBanner {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.customOne-container {
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* language toggle ----------------------------------------------------  */
+
+#language-switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#flagDe {
+  width:1rem;
+  height:auto;
+}
+
+#flagFr {
+  width:1rem;
+  height:auto;
+}
+
+#flagRu {
+  width:1rem;
+  height:auto;
+}
+
+.flag-icon {
+  width:1rem;
+  height:auto;
+}
+
+.dropdown-menu {
+  min-width: 5rem !important;
+}
+
+/* .dropdown-menu.show {
+  min-width: 5rem !important;
+} */
+
+.text-lastSection {
+  color:white !important;
+  position:relative;
+  z-index:0;
+}
+
+.footerOwn {
+  height:4rem;
+}
+
+blockquoteOwn {
+  /* font-family: Georgia, serif; */
+  font-size: 1rem;
+  font-style: italic;
+  width: 500px;
+  margin: 0.25em 0;
+  padding: 0.35em 40px;
+  line-height: 1.45;
+  position: relative;
+  color: #383838;
+}
+
+blockquoteOwn:before {
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: block;
+  padding-left: 10px;
+  content: "\201C";
+  /* content: "\00AB"; aka GUILMET «» in French/Russian? */
+  font-size: 100px;
+  position: absolute;
+  left: -20px;
+  /* top: -20px; */
+  top: -35px;
+  color: #7a7a7a;
+}
+
+blockquoteOwn cite {
+  color: #999999;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+blockquoteOwn cite:before {
+  content: "\2014 \2009";
+}
+
+blockquoteRight {
+  /* font-family: Georgia, serif; */
+  font-size: 1rem;
+  font-style: italic;
+  width: 500px;
+  margin: 0.25em 0;
+  padding: 0.35em 40px;
+  line-height: 1.45;
+  position: relative;
+  color: #383838;
+}
+
+/* blockquoteRight:before {
+  display: block;
+  padding-left: 10px;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  color: #7a7a7a;
+} */
+
+blockquoteRight cite {
+  color: #999999;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+blockquoteRight cite:before {
+  content: "\2014 \2009";
+}
+
+/* New Version mark 2 ===================================================================================================== */
+/* CSS */
+.btn-responsivefn {
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .btn-responsivefn  {
+    width: 60% !important;
+  }
+}
+
+/* OWN CSS END ===================================================================================================== */
