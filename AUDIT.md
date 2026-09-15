@@ -24,16 +24,15 @@ all pages, but the function `setActiveLanguage` is never defined anywhere in the
 codebase (checked `scripts/main.js` and every inline `<script>`). Throws
 `ReferenceError: setActiveLanguage is not defined` in the browser console on every click.*
 
-### 2. The envelope/mail button does nothing on the French and Russian pages
-On `index_french.html` and `index_rus.html`, the small red envelope button next to the
-phone icon (top of the page) is supposed to open an email to Alexandra when clicked.
-It currently does nothing at all.
+### 2. ~~The envelope/mail button does nothing on the French and Russian pages~~ FIXED
+~~On `index_french.html` and `index_rus.html`, the small red envelope button next to
+the phone icon (top of the page) is supposed to open an email to Alexandra when
+clicked. It currently does nothing at all.~~
 
-*Technical: the click handler looks for an element with id `mailButton`
-(`index_french.html:462`, `index_rus.html:462`), but the actual button in the page has
-id `mailbutton2` (`index_french.html:154`, `index_rus.html:154`). `getElementById`
-returns `null`, so `.addEventListener` throws a `TypeError` on page load, and the
-button never gets wired up.*
+**Fixed:** the click handler in both files (`index_french.html:462`,
+`index_rus.html:462`) now calls `getElementById('mailbutton2')`, matching the actual
+button id in the markup (`index_french.html:154`, `index_rus.html:154`). Button is
+wired up correctly and opens `mailto:alex.descamps@outlook.com`.
 
 ### 3. The homepage throws an error on every single visit
 Not visible to a normal visitor, but every time anyone loads the German homepage
@@ -160,55 +159,13 @@ is already working in these files.
 
 ---
 
-## ⚠️ Needs an answer from Alexandra before any code change here
+## ✅ Resolved: where form submissions go
 
-**Where should form submissions actually go?** Right now, three different email
-addresses are hardcoded across the site's form handlers:
-- `process.php` and `processform.php` (the contact form on DE/FR/RU pages) →
-  `alex.descamps@outlook.com`
-- `newsletter.php` (the newsletter signup, all pages) → `swissperspective@gmail.com`
-
-These don't match each other, and neither is obviously confirmed as Alexandra's
-current business inbox. **This could mean contact-form leads are silently going to
-the wrong place.** Please confirm the one (or two, if contact and newsletter should
-go to different inboxes) correct address(es) before this gets fixed — no code has
-been touched here yet.
+Alexandra confirmed all form submissions (contact form and newsletter signup) should
+go to a single address: `alex.descamps@outlook.com`. `newsletter.php` previously sent
+to a different, unconfirmed address (`swissperspective@gmail.com`) — this has been
+updated to `alex.descamps@outlook.com`. `process.php` and `processform.php` already
+used the correct address and needed no change. `swissperspective@gmail.com` is no
+longer referenced anywhere in the active codebase.
 
 ---
-
-## Developer effort & quote (CHF 150/hour)
-
-| # | Item | Prio | Est. hours |
-|---|------|------|-----------:|
-| 1 | Fix language-flag switcher (`setActiveLanguage`) | 1 | 1.5 |
-| 2 | Fix dead mail button on FR/RU (`mailButton` id) | 1 | 0.5 |
-| 3 | Remove dead newsletter-form listener on homepage | 1 | 0.5 |
-| 4 | Remove the pasted second document from `index.html` | 1 | 1.5 |
-| **Prio 1 subtotal** | | | **4.0 h → CHF 600** |
-| 5 | Re-enable & clean up FR/RU footer | 2 | 0.75 |
-| 6 | Add a contact/message form to the English page | 2 | 1.5 |
-| 7 | Compress/resize oversized images | 2 | 2.0 |
-| 8 | Fix duplicate `id="email"` (3 pages) | 2 | 0.5 |
-| 9 | Fix Bootstrap version mismatch + PHP notice on `processform.php` | 2 | 1.0 |
-| 10 | Remove duplicate function in `scripts/main.js` | 2 | 0.3 |
-| **Prio 2 subtotal** | | | **6.05 h → CHF 908** |
-| 11 | Archive/remove orphaned old page copies | 3 | 0.5 |
-| 12 | Remove unused `process.php` | 3 | 0.25 |
-| 13 | Clean up leftover commented-out code | 3 | 1.0 |
-| **Prio 3 subtotal** | | | **1.75 h → CHF 263** |
-| — | Cross-browser / cross-language regression testing (all 4 live pages), if doing everything | — | 1.5 |
-
-### Quotes
-
-- **Fixing Prio 1 only** (stop the console errors / restore the broken buttons):
-  **≈ 4.5 hours → CHF 675** (includes a light re-test pass on the fixed pages).
-- **Fixing everything** (Prio 1 + 2 + 3 + full regression test):
-  **≈ 13.3 hours → CHF 1,995**.
-
-Not included in either quote above: deciding and implementing the correct
-form-recipient email address(es) (the ⚠️ item above) — that's roughly 0.5h once
-Alexandra confirms the address(es), priced separately since it needs her answer first.
-
-These are estimates based on a code read-through, not a guarantee — if something looks
-more tangled once we're inside the fix (e.g. images need re-shooting rather than just
-compressing), I'll flag it before doing extra work.
