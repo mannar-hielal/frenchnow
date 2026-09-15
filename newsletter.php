@@ -1,6 +1,6 @@
 <?php
 // Set your receiving email here
-$to = "swissperspective@gmail.com";
+$to = "alex.descamps@outlook.com";
 $subject = "Neue Newsletter-Anmeldung";
 
 // Only process POST requests
